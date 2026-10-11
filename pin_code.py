@@ -1,9 +1,16 @@
-from menu import menu
+from account import accounts
 
-accounts = {"fan2riasgremory" : {"PIN" :"995890", "Solde" : 45854},
-            "Poisson92" : {"PIN" : "Freedom2026", "Solde" : 85686},
-            "Beerlamb12" : {"PIN" : "rrrrrrttttt84", "Solde" : 34}}
 
+def show_me_the_money (account):
+    balance = input ("\nShow me the money ? : ").lower()
+    if balance in ["yes", "of course", "show me the money", "show me my money", "for sure", "yep"]:
+        print(accounts[account]["Solde"], "€")
+        
+    elif balance == "balance unlimited":
+        accounts[account]["Solde"] = 9999999999999999
+        print(accounts[account]["Solde"], "€")
+    from fonction_convertisseur import converter
+    converter()
 
 
 def register_or_login ():
@@ -35,15 +42,12 @@ def login():
         PIN = input("PIN : ")
         if account in accounts and accounts[account]["PIN"] == PIN:
             print("\nLogin successful")
-            menu (account)
+            show_me_the_money(account)
             return
         else:
             print("Wrong account or PIN")
             count_false += 1
     print ("Error n1. Please restart")
     register_or_login ()
-    
-    
-    
 
-register_or_login ()
+register_or_login()

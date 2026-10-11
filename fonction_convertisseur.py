@@ -1,5 +1,4 @@
 from math import floor
-from menu import menu
 
 def converter ():
     nb50 = 0 # nombre de billets de 50 € qui se trouveront dans la conversion
@@ -51,9 +50,6 @@ def converter ():
 
 
     print ("\n") # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
-    menu ()
 
-    
-    
 
-converter ()
+converter () # lance la fonction de conversion
