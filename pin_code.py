@@ -1,7 +1,6 @@
 from all_accounts import accounts #importe le dictionnaire contenant les comptes, les PIN et les soldes
-
-agree_words = ["yes", "of course", "for sure", "yep", "Y", "yurp", "yup", "oui"]
-quit_words = ["quit", "stop", "terminate", "end", "exit"]
+from tools import *
+from data import *
 
 def show_me_the_money (account):
 
@@ -43,17 +42,24 @@ def register(account):
         register_or_login ()
     elif account in quit_words:
         exit()
-    else:
+    elif validate_account (account) == True:
         PIN = input("Choose a PIN : ")
-        accounts[account] = {"PIN": PIN, "Solde": 0} # ajoute le nouveau compte à la liste des comptes avec un solde de 0
-        print("\nAccount created")
+        if validate_code (PIN) == True and is_a_number (PIN) == True:
+            accounts[account] = {"PIN": PIN, "Solde": 0} # ajoute le nouveau compte à la liste des comptes avec un solde de 0
+            print("\nAccount created")
+            register_or_login ()
+        else:
+            register (account)
+    else:
         register_or_login ()
+        return
+        
 
 
 
 def login():
     count_false = 1 # variable qui compte le nombre de tentatives de connexion échouées, pour limiter à 3 tentatives
-    while count_false <= 3 :
+    while count_false <= max_attempts:
         account = input("\nName account : ")
         PIN = input("PIN : ")
         if account in accounts and accounts[account]["PIN"] == PIN: # vérifie si le nom de compte et le PIN saisis par l'utilisateur correspondent à un compte existant dans le dictionnaire accounts
