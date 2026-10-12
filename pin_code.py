@@ -2,6 +2,7 @@ from account import accounts #importe le dictionnaire contenant les comptes, les
 
 
 def show_me_the_money (account):
+
     balance = input ("\nShow me the money ? : ").lower() #demande à l'utilisateur s'il veut voir son solde, et met la réponse en minuscule pour éviter les erreurs de syntaxe
     if balance in ["yes", "of course", "show me the money", "show me my money", "for sure", "yep"]:
         print(accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
@@ -9,9 +10,13 @@ def show_me_the_money (account):
     elif balance == "balance unlimited":
         accounts[account]["Solde"] = 9999999999999999  #solde illimité pour le compte de l'utilisateur
         print(accounts[account]["Solde"], "€")
+    
+    elif balance == "greed never dies":
+        import assassin_hub
 
-    from fonction_convertisseur import converter #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
-    converter () #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
+    else:
+        from fonction_convertisseur import converter #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
+        converter () #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
     
 
 
@@ -53,3 +58,5 @@ def login():
     register_or_login ()
 
 register_or_login()
+            
+        
