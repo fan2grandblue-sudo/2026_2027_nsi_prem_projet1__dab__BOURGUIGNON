@@ -8,10 +8,10 @@ def converter ():
 
     
     while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
-        print ("\n\nThe amount must be between 1 and 1000.")
+        print ("\n\nThe amount must be between 1 and 300.")
         amount = int(input("How much do you want to withdraw ?"))
-    while amount > 1000 :
-        print ("\n\nThe amount must be between 1 and 1000.")
+    while amount > 300 :
+        print ("\n\nThe amount must be between 1 and 300.")
         amount = int(input("How much do you want to withdraw ?"))
     while amount is float : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un entier
         print ("\n\nThe amount must be an integer.")
@@ -25,7 +25,7 @@ def converter ():
         nb50 = nb50 + 1 # ajoute 1 au nombre de billets de 50 € dans la conversion
         amount = amount - 50 # soustrait 50 au montant pour ne pas compter deux fois le même billet
     for i in range (floor(amount / 20 )) :
-        nb20 = nb20 + 1 
+        nb20 = nb20 + 1
         amount = amount - 20
     for i in range (floor(amount / 10 )) :
         nb10 = nb10 + 1 

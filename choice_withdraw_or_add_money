@@ -1,0 +1,15 @@
+def choice_withdraw_or_add_money ():
+    withdraw = str(input("Do you want to withdraw ? yes / no "))
+    a = 0
+    while a == 0:
+        if withdraw != "yes" or withdraw != "no":
+            withdraw = str(input("Do you want to withdraw ? yes / no "))
+        if withdraw == "yes":
+            from fonction_convertisseur import converter #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
+            converter () #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
+        else :
+            add_money()
+    
+
+def add_money():
+    money_added = int(input("How much do you want to add to your account ?"))
