@@ -1,3 +1,3 @@
-accounts = {"fan2riasgremory" : {"PIN" :"995890", "Solde" : 45854},
-            "Poisson92" : {"PIN" : "Freedom2026", "Solde" : 85686},
-            "Beerlamb12" : {"PIN" : "rrrrrrttttt84", "Solde" : 34}} #dictionnaire contenant les comptes, les PIN et les soldes de chaque user
+accounts = {"fan2riasgremory" : {"PIN" :"1994", "Solde" : 500},
+            "Poisson92" : {"PIN" : "2026", "Solde" : 500},
+            "Beerlambert12" : {"PIN" : "0084", "Solde" : 500}} #dictionnaire contenant les comptes, les PIN et les soldes de chaque user
