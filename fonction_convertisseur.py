@@ -1,4 +1,5 @@
 from math import floor
+from data import *
 
 def converter ():
     nb50 = 0 # nombre de billets de 50 € qui se trouveront dans la conversion
