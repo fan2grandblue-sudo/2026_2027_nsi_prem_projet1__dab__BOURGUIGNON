@@ -49,7 +49,7 @@ def converter ():
         print (f"{nb10} bills of 10 €")
 
 
-    print ("\n") # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
+    return "\n" # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
 
 
 converter () # lance la fonction de conversion
