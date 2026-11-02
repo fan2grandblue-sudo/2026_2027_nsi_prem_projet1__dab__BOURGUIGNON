@@ -29,6 +29,7 @@ def money_added_correct(money_added):
         if money_added_list[i] not in numbers : # vérifie si chaque caractère du montant est un entier naturel
             money_added_list = [] # réinitialise la liste pour une nouvelle entrée
             return False
+    return True
 
 
 def add_money(account):
