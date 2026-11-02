@@ -6,7 +6,6 @@ def converter ():
     nb20 = 0
     nb10 = 0
     amount = int(input("\n\nHow much do you want to withdraw (multiple of 10) ? ")) # demande au user de rentrer la somme d'argent qu'il veut convertir en billets et pièces
-
     
     while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
         print ("\n\nThe amount must be between 1 and 300.")
@@ -14,7 +13,7 @@ def converter ():
     while amount > 300 :
         print ("\n\nThe amount must be between 1 and 300.")
         amount = int(input("How much do you want to withdraw ?"))
-    while amount is float : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un entier
+    while type(amount) is float : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un entier
         print ("\n\nThe amount must be an integer.")
         amount = int(input("How much do you want to withdraw ?"))
     while amount % 10 != 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un multiple de 10
@@ -52,5 +51,3 @@ def converter ():
 
     return "\n" # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
 
-
-converter () # lance la fonction de conversion

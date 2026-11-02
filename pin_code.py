@@ -1,6 +1,7 @@
-from all_accounts import accounts #importe le dictionnaire contenant les comptes, les PIN et les soldes
+from all_accounts import * #importe le dictionnaire contenant les comptes, les PIN et les soldes
 from tools import *
 from data import *
+
 
 def show_me_the_money (account):
 
@@ -19,8 +20,8 @@ def show_me_the_money (account):
         exit()
 
     else:
-        from fonction_convertisseur import converter #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
-        converter () #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
+        from choice_withdraw_or_add_money import choice_withdraw_or_add_money #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
+        choice_withdraw_or_add_money (account) #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
 
 
 
