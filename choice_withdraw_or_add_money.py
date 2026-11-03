@@ -44,5 +44,3 @@ def add_money(account):
     
     
     print(f"\nYou now have {accounts[account]['Solde']} on your account ! ")
-
-choice_withdraw_or_add_money (accounts)

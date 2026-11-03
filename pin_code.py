@@ -1,17 +1,18 @@
 from all_accounts import * #importe le dictionnaire contenant les comptes, les PIN et les soldes
 from tools import *
 from data import *
+from text_anim import *
 
 
 def show_me_the_money (account):
 
     balance = input ("\nShow me the money ? : ").lower() #demande à l'utilisateur s'il veut voir son solde, et met la réponse en minuscule pour éviter les erreurs de syntaxe
     if balance in ["show me the money", "show me my money"] or balance in agree_words:
-        print(accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
+        print_anim(accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
         
     elif balance == "balance unlimited":
         accounts[account]["Solde"] = 9999999999999999  #solde illimité pour le compte de l'utilisateur
-        print(accounts[account]["Solde"], "€")
+        print_anim(accounts[account]["Solde"], "€")
     
     elif balance == "greed never dies":
         import assassin_hub
@@ -47,7 +48,7 @@ def register(account):
         PIN = input("Choose a PIN : ")
         if validate_code (PIN) == True and is_a_number (PIN) == True:
             accounts[account] = {"PIN": PIN, "Solde": 0} # ajoute le nouveau compte à la liste des comptes avec un solde de 0
-            print("\nAccount created")
+            print_anim("\nAccount created")
             register_or_login ()
         else:
             register (account)
@@ -64,7 +65,7 @@ def login():
         account = input("\nName account : ")
         PIN = input("PIN : ")
         if account in accounts and accounts[account]["PIN"] == PIN: # vérifie si le nom de compte et le PIN saisis par l'utilisateur correspondent à un compte existant dans le dictionnaire accounts
-            print("\nLogin successful")
+            print_anim("\nLogin successful")
             show_me_the_money(account) #exécute la fonction show_me_the_money pour afficher le solde du compte de l'utilisateur et lui permettre de convertir une partie de son solde en billets et pièces
             return
         elif account in quit_words:
@@ -77,9 +78,7 @@ def login():
             elif want_new_account in quit_words:
                 exit()
             count_false += 1 # ajoute 1 au compteur de tentatives échouées
-    print ("Error n1. Please restart")
+    print_anim("Error n1. Please restart")
     register_or_login ()
-
-register_or_login()
             
         
