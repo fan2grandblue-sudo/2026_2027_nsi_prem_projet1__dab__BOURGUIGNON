@@ -4,7 +4,7 @@ print("\033[38;5;40mBOOTING UP")
 def print_anim(text):
     for character in text:
         print(character, end="", flush=True)
-        sleep(0.1)
+        sleep(0.08)
 
 def load_dots(duration, dots):
     for n in range(dots):
@@ -22,7 +22,7 @@ def load_bar(duration, length):
         stdout.write(f"\r{bar} {percent}%")
         stdout.flush()
         sleep(duration / length)
-    sleep(3)
+    sleep(2)
     stdout.flush()
     print("\n\n\n")
 
