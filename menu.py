@@ -1,14 +1,8 @@
 from pin_code import *
 from tools import *
 from data import *
-<<<<<<< HEAD
 from fonction_convertisseur import *
 from add_money import *
-=======
-from add_money import *
-from fonction_convertisseur import *
-import sys
->>>>>>> 02c39dacb605a31dce2e96a2a5d8ac3d2614f682
 
 
 
