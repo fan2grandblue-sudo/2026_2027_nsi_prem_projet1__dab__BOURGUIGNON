@@ -2,7 +2,8 @@ from pin_code import *
 from all_accounts import *
 from text_anim import *
 from data import *
-from choice_withdraw_or_add_money import *
+from add_money import *
+from fonction_convertisseur import *
 import sys
 
 
