@@ -8,17 +8,17 @@ def is_correct (choice):
 def is_not_correct (choice) :
     return not (is_correct (choice))
 
-def choice_withdraw_or_add_money (account):
-    choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
-    choice_made = 0 # servira uniquement à créer une boucle while tant que l'utilisateur n'aura pas fait un choix correct
-    while is_not_correct (choice):
-        choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
-    if choice == "withdraw":
-        converter () # lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
-    elif choice == "add" :
-        add_money (account)
+#def choice_withdraw_or_add_money (account):
+    #choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
+    #choice_made = 0 # servira uniquement à créer une boucle while tant que l'utilisateur n'aura pas fait un choix correct
+    #while is_not_correct (choice):
+        #choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
+    #if choice == "withdraw":
+        #converter () # lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
+    #elif choice == "add" :
+        #add_money (account)
 
-    print("\nThank you for using our services ! \nSee you soon ! \n")
+    #print("\nThank you for using our services ! \nSee you soon ! \n")
 
 def money_added_correct(money_added):
     money_added_list = [] # met le montant à ajouter sous forme de liste pour ensuite parcourir chaque caractère du montant et vérifier qu'il sont tous des entiers naturels
@@ -28,8 +28,8 @@ def money_added_correct(money_added):
     for i in range (len(money_added)):
         if money_added_list[i] not in numbers : # vérifie si chaque caractère du montant est un entier naturel
             money_added_list = [] # réinitialise la liste pour une nouvelle entrée
-            return False
-    return True
+            return True
+    return False
 
 
 def add_money(account):
@@ -44,3 +44,6 @@ def add_money(account):
     
     
     print(f"\nYou now have {accounts[account]['Solde']} on your account ! ")
+
+
+add_money (account)
