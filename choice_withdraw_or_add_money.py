@@ -1,6 +1,7 @@
 from all_accounts import accounts #importe le dictionnaire contenant les comptes, les PIN et les soldes
 from fonction_convertisseur import converter # importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
 from data import *
+from text_anim import *
 
 def is_correct (choice):
     return choice in acceptable_entries
@@ -38,12 +39,12 @@ def add_money(account):
     while money_added_correct (money_added) == False : # exécute la fonction qui vérifie si l'entrée est bien un entier naturel
         money_added = input("\nHow much do you want to add to your account ?  ")
     
-    accounts[account]["Solde"] = accounts[account]['Solde'] + money_added
+    accounts[account]["Solde"] = accounts[account]["Solde"] + money_added
     
 
     
     
-    print(f"\nYou now have {accounts[account]['Solde']} on your account ! ")
+    print_anim (f"\nYou now have {accounts[account]["Solde"]} on your account ! ")
 
 
 add_money (account)
