@@ -27,3 +27,6 @@ def add_money(account):
     
     
     print_anim (f"\nYou now have {accounts[account]["Solde"]} on your account ! ")
+
+
+#add_money (account)
