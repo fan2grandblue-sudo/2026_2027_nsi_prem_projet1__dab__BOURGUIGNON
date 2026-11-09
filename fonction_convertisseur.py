@@ -39,17 +39,17 @@ def converter (account):
     print_anim ("\nHere is your change :\n")
 
     if nb50 == 1 :
-        print_anim ("1 bill of 50 €") # pour faire en sorte que ça affiche "billet" sans "s" puisque qu'il n'y en a qu'un seul
+        print_anim ("1 bill of 50 €\n") # pour faire en sorte que ça affiche "billet" sans "s" puisque qu'il n'y en a qu'un seul
     elif nb50 > 1 :
-        print_anim (f"{nb50} bills of 50 €") # pour faire en sorte de ne pas afficher de billets rendus s'il n'y en a pas
+        print_anim (f"{nb50} bills of 50 €\n") # pour faire en sorte de ne pas afficher de billets rendus s'il n'y en a pas
     if nb20 == 1 :
-        print_anim ("1 bill of 20 €")
+        print_anim ("1 bill of 20 €\n")
     elif nb20 > 1 :
-        print_anim (f"{nb20} bills of 20 €")
+        print_anim (f"{nb20} bills of 20 €\n")
     if nb10 == 1 :
-        print_anim ("1 bill of 10 €")
+        print_anim ("1 bill of 10 €\n")
     elif nb10 > 1 :
-        print_anim (f"{nb10} bills of 10 €")
+        print_anim (f"{nb10} bills of 10 €\n")
 
 
     print_anim (f"You now have {accounts[account]["Solde"]} on your account.")
