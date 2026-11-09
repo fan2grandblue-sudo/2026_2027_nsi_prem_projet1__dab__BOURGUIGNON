@@ -42,7 +42,7 @@ def login():
         account = input("\nName account : ")
         PIN = input("PIN : ")
         if account in accounts and accounts[account]["PIN"] == PIN: # vérifie si le nom de compte et le PIN saisis par l'utilisateur correspondent à un compte existant dans le dictionnaire accounts
-            print_anim("\nLogin successful")
+            print_anim("\nLogin successful\n")
             main_menu (account) #exécute la fonction main_menu
             return
         elif account in quit_words:
