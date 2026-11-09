@@ -1,17 +1,17 @@
 from pin_code import *
-from all_accounts import *
-from text_anim import *
+from tools import *
 from data import *
-from choice_withdraw_or_add_money import *
-import sys
+from fonction_convertisseur import *
+from add_money import *
 
 
 
 def main_menu (account):
+    longline ()
     print_anim ("\n1 - Show Bank Account")
     print_anim ("\n2 - Operation")
-    print_anim ("\n3 - Add money")
-    print_anim ("\n4 - Withdraw money")
+    print_anim ("\n3 - Withdraw money")
+    print_anim ("\n4 - Add money")
     print_anim ("\n5 - Logout")
     answer = input ("\nChoose an operation : ")
     if answer == "1" :
@@ -24,7 +24,10 @@ def main_menu (account):
         pass
         #settings ()
     elif answer == "5":
-        sys.exit()
+        print_anim ("\nThanks for using our ATM") 
+        print_anim ("\nSee you soon !")
+        load_dots(1, 3)
+        exit ()
     else:
         print ("Please choose one of the operation above")
         main_menu (account)

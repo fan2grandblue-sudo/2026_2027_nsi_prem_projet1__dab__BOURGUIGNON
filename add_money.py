@@ -1,7 +1,6 @@
-from all_accounts import accounts #importe le dictionnaire contenant les comptes, les PIN et les soldes
 from fonction_convertisseur import converter # importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
 from data import *
-from text_anim import *
+from tools import *
 
 
 def money_added_correct(money_added):

@@ -1,4 +1,4 @@
-from text_anim import *
+from tools import *
 load_bar(5, 100)
 print_anim("WELCOME TO THE ATM\n")
 from pin_code import *

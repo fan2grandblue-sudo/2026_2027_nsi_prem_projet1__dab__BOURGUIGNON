@@ -1,7 +1,5 @@
-from all_accounts import * #importe le dictionnaire contenant les comptes, les PIN et les soldes
 from tools import *
 from data import *
-from text_anim import *
 from menu import *
 
 
