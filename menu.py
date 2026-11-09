@@ -9,9 +9,9 @@ from add_money import *
 def main_menu (account):
     longline ()
     print_anim ("\n1 - Show Bank Account")
-    print_anim ("\n2 - Operation")
+    print_anim ("\n2 - Add money")
     print_anim ("\n3 - Withdraw money")
-    print_anim ("\n4 - Add money")
+    print_anim ("\n4 - Settings")
     print_anim ("\n5 - Logout")
     answer = input ("\nChoose an operation : ")
     if answer == "1" :
@@ -25,7 +25,7 @@ def main_menu (account):
         #settings ()
     elif answer == "5":
         print_anim ("\nThanks for using our ATM") 
-        print_anim ("\nSee you soon !")
+        print_anim ("\nSee you soon !\n")
         load_dots(1, 3)
         exit ()
     else:
