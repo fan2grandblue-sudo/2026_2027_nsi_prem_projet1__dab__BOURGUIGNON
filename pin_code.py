@@ -2,28 +2,7 @@ from all_accounts import * #importe le dictionnaire contenant les comptes, les P
 from tools import *
 from data import *
 from text_anim import *
-
-
-def show_me_the_money (account):
-
-    balance = input ("\nShow me the money ? : ").lower() #demande à l'utilisateur s'il veut voir son solde, et met la réponse en minuscule pour éviter les erreurs de syntaxe
-    if balance in ["show me the money", "show me my money"] or balance in agree_words:
-        print_anim(accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
-        
-    elif balance == "balance unlimited":
-        accounts[account]["Solde"] = 9999999999999999  #solde illimité pour le compte de l'utilisateur
-        print_anim(accounts[account]["Solde"], "€")
-    
-    elif balance == "greed never dies":
-        import assassin_hub
-    
-    elif balance in quit_words:
-        exit()
-
-    else:
-        from choice_withdraw_or_add_money import choice_withdraw_or_add_money #importe la fonction de conversion pour que l'utilisateur puisse convertir son solde en billets et pièces
-        choice_withdraw_or_add_money (account) #lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
-
+from menu import *
 
 
 def register_or_login ():
@@ -66,7 +45,7 @@ def login():
         PIN = input("PIN : ")
         if account in accounts and accounts[account]["PIN"] == PIN: # vérifie si le nom de compte et le PIN saisis par l'utilisateur correspondent à un compte existant dans le dictionnaire accounts
             print_anim("\nLogin successful")
-            show_me_the_money(account) #exécute la fonction show_me_the_money pour afficher le solde du compte de l'utilisateur et lui permettre de convertir une partie de son solde en billets et pièces
+            main_menu (account) #exécute la fonction main_menu
             return
         elif account in quit_words:
             exit()
