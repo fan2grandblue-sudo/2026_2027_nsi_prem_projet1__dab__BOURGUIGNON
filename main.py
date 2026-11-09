@@ -1,4 +1,3 @@
-from fonction_convertisseur import *
 from text_anim import *
 load_bar(5, 100)
 print_anim("WELCOME TO THE ATM\n")
