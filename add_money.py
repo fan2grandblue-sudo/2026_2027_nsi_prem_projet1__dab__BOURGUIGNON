@@ -3,23 +3,6 @@ from fonction_convertisseur import converter # importe la fonction de conversion
 from data import *
 from text_anim import *
 
-def is_correct (choice):
-    return choice in acceptable_entries
-
-def is_not_correct (choice) :
-    return not (is_correct (choice))
-
-#def choice_withdraw_or_add_money (account):
-    #choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
-    #choice_made = 0 # servira uniquement à créer une boucle while tant que l'utilisateur n'aura pas fait un choix correct
-    #while is_not_correct (choice):
-        #choice = str(input("\nDo you want to withdraw or to add money to your account ?  withdraw / add  "))
-    #if choice == "withdraw":
-        #converter () # lance la fonction de conversion pour que l'utilisateur puisse convertir son solde
-    #elif choice == "add" :
-        #add_money (account)
-
-    #print("\nThank you for using our services ! \nSee you soon ! \n")
 
 def money_added_correct(money_added):
     money_added_list = [] # met le montant à ajouter sous forme de liste pour ensuite parcourir chaque caractère du montant et vérifier qu'il sont tous des entiers naturels
@@ -47,4 +30,4 @@ def add_money(account):
     print_anim (f"\nYou now have {accounts[account]["Solde"]} on your account ! ")
 
 
-add_money (account)
+#add_money (account)
