@@ -21,7 +21,7 @@ def add_money(account):
     while money_added_correct (money_added) == False : # exécute la fonction qui vérifie si l'entrée est bien un entier naturel
         money_added = str(input("\nHow much do you want to add to your account ?  "))
     
-    accounts[account]["Solde"] = int(accounts[account]["Solde"]) + money_added
+    accounts[account]["Solde"] = int(accounts[account]["Solde"]) + int(money_added)
     
 
     
