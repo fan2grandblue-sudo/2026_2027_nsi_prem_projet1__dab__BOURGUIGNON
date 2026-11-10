@@ -16,10 +16,10 @@ def money_added_correct(money_added):
 
 
 def add_money(account):
-    money_added = int(input("\nHow much do you want to add to your account ?  "))  # servira à redemander une somme à ajouter tant que l'utilisateur n'aura pas rentré un nombre entier
+    money_added = str(input("\nHow much do you want to add to your account ?  "))  # servira à redemander une somme à ajouter tant que l'utilisateur n'aura pas rentré un nombre entier
     
     while money_added_correct (money_added) == False : # exécute la fonction qui vérifie si l'entrée est bien un entier naturel
-        money_added = int(input("\nHow much do you want to add to your account ?  "))
+        money_added = str(input("\nHow much do you want to add to your account ?  "))
     
     accounts[account]["Solde"] = int(accounts[account]["Solde"]) + money_added
     
