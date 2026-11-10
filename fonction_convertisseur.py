@@ -1,6 +1,7 @@
 from math import floor
 from data import *
 from tools import *
+from menu import *
 
 def converter (account):
     nb50 = 0 # nombre de billets de 50 € qui se trouveront dans la conversion
@@ -55,5 +56,8 @@ def converter (account):
     print_anim (f"You now have {accounts[account]["Solde"]} on your account.")
 
 
-    return "\n" # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
+    print("\n") # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
+
+    main_menu()
+
 
