@@ -22,3 +22,8 @@ Pin_code :
 - création d'un fichier tools.py : outils de vérification du bon format des codes et des identifiants
 - création d'un fichier data.py : stockage des variables souvent appelées
 
+* UPDATE 9 NOV. 2026
+- lien flowchart architecture : https://miro.com/app/live-embed/uXjVEQPNW_A=/?embedMode=view_only_without_ui&moveToViewport=-1071%2C-462%2C1884%2C934&embedId=42337271438
+
+* UPDATE 10 NOV. 2026
+- lien flowchart architecture : https://miro.com/app/live-embed/uXjVEQPNW_A=/?embedMode=view_only_without_ui&moveToViewport=-994%2C-504%2C2147%2C1064&embedId=309815913058
