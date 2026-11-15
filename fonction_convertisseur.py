@@ -13,16 +13,20 @@ def converter (account):
     
     while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
         print_anim ("\n\nThe amount must be between 1 and 300.")
-        amount = int(input("How much do you want to withdraw ?"))
+        amount = int(input("How much do you want to withdraw ?"))  # si le user n'avait au départ pas rentré un montant correct, le programme enregistre le nouveau montant et soustrait ce dernier au solde du compte
+        accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     while amount > 300 :
         print_anim ("\n\nThe amount must be between 1 and 300.")
         amount = int(input("How much do you want to withdraw ?"))
+        accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     while type(amount) is float : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un entier
         print_anim ("\n\nThe amount must be an integer.")
         amount = int(input("How much do you want to withdraw ?"))
+        accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     while amount % 10 != 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un multiple de 10
         print_anim ("\n\nThe amount must be a multiple of 10.")
         amount = int(input("How much do you want to withdraw (multiple of 10) ? "))
+        accounts[account]["Solde"] = accounts[account]["Solde"] - amount
         
     
     for i in range (floor(amount / 50 )) : # permet de soustraire un nombre de billets de 50 € dépendant du montant
