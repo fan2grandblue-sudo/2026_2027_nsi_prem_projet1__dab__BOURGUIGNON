@@ -5,13 +5,14 @@ from all_accounts import *
 
 
 def register_or_login ():
-    sign_in = input ("\nAlready have an account ? : ").lower() #demande à l'utilisateur s'il a déjà un compte, et met la réponse en minuscule pour éviter les erreurs de syntaxe
+    print("\n")
+    sign_in = input (translation[language][1]).lower() #demande à l'utilisateur s'il a déjà un compte, et met la réponse en minuscule pour éviter les erreurs de syntaxe
     if sign_in in agree_words or sign_in == "already have one":
         login ()
     elif sign_in in quit_words:
         exit()
     else:
-        account = input("Choose an account name : ") #demande à l'utilisateur de choisir un nom de compte
+        account = input(translation[language][2]) #demande à l'utilisateur de choisir un nom de compte
         register (account)
 
 
