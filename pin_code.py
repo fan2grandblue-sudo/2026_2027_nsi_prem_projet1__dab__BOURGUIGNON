@@ -57,5 +57,3 @@ def login():
             count_false += 1 # ajoute 1 au compteur de tentatives échouées
     print_anim("Error n1. Please restart")
     register_or_login ()
-            
-        
