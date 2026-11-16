@@ -27,3 +27,10 @@ Pin_code :
 
 * UPDATE 10 NOV. 2026
 - lien flowchart architecture : https://miro.com/app/live-embed/uXjVEQPNW_A=/?embedMode=view_only_without_ui&moveToViewport=-994%2C-504%2C2147%2C1064&embedId=309815913058
+
+* UPDATE 16 NOV. 2026
+- amélioration de l'affichage de la load bar
+- création d'un fichier all_accounts qui contient également deux fonctions qui permettent d'enregistrer des comptes (nom, PIN, solde) et sont sauvegardés, même lorsque l'on sort de l'application  ==>  cela modifie donc le fichier json
+- fonction_convertisseur : on a fait en sorte que le programme affiche le montant prélever correct (par exemple, il ne doit pas afficher le premier montant prélever si celui-ci est trop grand alors que le user a finalement prélever un montant réglementaire, et donc bien moindre)
+- add_money : on a réussi a faire en sorte que si le user ne met pas un montant qui est un nombre, le programme redemande correctement et prend la nouvelle valeur que le user a entré
+- début de la création dans data du dictionnaire contenant tous les textes de l'ATM dans différentes langues.
