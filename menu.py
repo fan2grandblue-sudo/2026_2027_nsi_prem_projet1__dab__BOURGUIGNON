@@ -30,7 +30,7 @@ def main_menu (account):
         exit ()
     else:
         print ("Please choose one of the operation above")
-        main_menu (account)
+    main_menu (account)
 
     
 
@@ -38,6 +38,5 @@ def main_menu (account):
 
 def show_me_the_money (account):
 
-    print_anim(accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
-    
-    main_menu (account)
+    print_anim (("You have ",accounts[account]["Solde"], " €\n")) #print le solde du compte de l'utilisateur
+

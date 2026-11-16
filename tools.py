@@ -27,6 +27,7 @@ def load_bar(duration, length):
     print("\n\n\n")
 
 def longline():
+    print("\n")
     for n in range(100):
         print("\033[38;5;40m_", end="_", flush=True)
     print("\n")
@@ -51,7 +52,7 @@ def is_a_number (PIN):
         return False
     
 def validate_account (account):
-    if len(account) <=4:
+    if len(account) <4:
         print ("Name account must contain 4 characters minimum")
         return False
     else:
