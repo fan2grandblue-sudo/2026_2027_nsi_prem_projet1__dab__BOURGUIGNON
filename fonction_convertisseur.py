@@ -53,7 +53,6 @@ def converter (account):
     elif nb10 > 1 :
         print_anim (f"{nb10} bills of 10 €\n")
 
-
     print_anim (f"You now have {accounts[account]["Solde"]} on your account.\n")
 
     print ("")
