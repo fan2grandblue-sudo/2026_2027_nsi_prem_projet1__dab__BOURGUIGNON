@@ -5,22 +5,10 @@ from all_accounts import *
 
 
 def money_added_correct(money_added):
-<<<<<<< HEAD
     for character in money_added:
         if character not in numbers : # vérifie si chaque caractère du montant est un entier naturel
             return False
     return True
-=======
-    money_added_list = [] # met le montant à ajouter sous forme de liste pour ensuite parcourir chaque caractère du montant et vérifier qu'il sont tous des entiers naturels
-    for i in range (len(money_added)):
-        money_added_list.append(money_added)
-    
-    for i in range (len(money_added)):
-        if money_added_list[i] not in numbers : # vérifie si chaque caractère du montant est un entier naturel
-            money_added_list = [] # réinitialise la liste pour une nouvelle entrée
-            return True
-    return False
->>>>>>> f90a123e4f6aeaa91db9d3905929bf12a0a8ca9b
 
 
 def add_money(account):

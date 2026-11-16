@@ -1,16 +1,31 @@
 import json
+import os
 
-accounts = {"fan2riasgremory" : {"PIN" :"1994", "Solde" : 500},
-            "Poisson92" : {"PIN" : "2026", "Solde" : 500},
-            "Beerlambert12" : {"PIN" : "0084", "Solde" : 500}} #dictionnaire contenant les comptes, les PIN et les soldes de chaque user
+FICHIER_ACCOUNTS = "accounts.json"
 
-# Crée ou écrase le fichier 'donnees.json' dans le dossier de votre projet
-with open("donnees.json", "w", encoding="utf-8") as fichier:
-  json.dump(accounts, fichier, indent=4, ensure_ascii=False)
+accounts = {
+    "fan2riasgremory": {"PIN": "1994", "Solde": 500},
+    "Poisson92": {"PIN": "2026", "Solde": 500},
+    "Beerlambert12": {"PIN": "0084", "Solde": 500},
+}
 
-import json
 
-with open("donnees.json", "r", encoding="utf-8") as fichier:
-  accounts = json.load(fichier)
+def charger_accounts():
+  global accounts
+  if os.path.exists(FICHIER_ACCOUNTS):
+    with open(FICHIER_ACCOUNTS, "r", encoding="utf-8") as fichier:
+      accounts.clear()
+      accounts.update(json.load(fichier))
+  else:
+    sauvegarder_accounts(accounts)
+  return accounts
+
+
+def sauvegarder_accounts(accounts):
+  with open(FICHIER_ACCOUNTS, "w", encoding="utf-8") as fichier:
+    json.dump(accounts, fichier, indent=4, ensure_ascii=False)
+
+
+
 
 

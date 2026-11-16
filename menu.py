@@ -24,12 +24,14 @@ def main_menu (account):
         pass
         #settings ()
     elif answer == "5":
+        sauvegarder_accounts(accounts)
         print_anim ("\nThanks for using our ATM") 
         print_anim ("\nSee you soon !\n")
         load_dots(1, 3)
         exit ()
     else:
         print ("Please choose one of the operation above")
+    sauvegarder_accounts(accounts)
     main_menu (account)
 
     
