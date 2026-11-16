@@ -27,6 +27,7 @@ def load_bar(duration, length):
     print("\n\n\n")
 
 def longline():
+    print("\n")
     for n in range(100):
         print("\033[38;5;40m_", end="_", flush=True)
     print("\n")
