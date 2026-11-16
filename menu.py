@@ -38,5 +38,5 @@ def main_menu (account):
 
 def show_me_the_money (account):
 
-    print (accounts[account]["Solde"], "€") #print le solde du compte de l'utilisateur
+    print_anim (("You have ",accounts[account]["Solde"], " €\n")) #print le solde du compte de l'utilisateur
 

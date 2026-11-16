@@ -53,11 +53,11 @@ def converter (account):
         print_anim (f"{nb10} bills of 10 €\n")
 
 
-    print_anim (f"\nYou now have {accounts[account]["Solde"]} on your account.")
+    print_anim (f"You now have {accounts[account]["Solde"]} on your account.\n")
+
+    print ("")
 
 
-    print("\n") # pour une question d'esthétique, afin de ne pas coller le texte à la suite de la conversion
 
-    main_menu (account)
 
 
