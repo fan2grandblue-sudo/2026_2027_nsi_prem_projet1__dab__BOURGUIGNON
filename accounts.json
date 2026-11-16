@@ -14,5 +14,9 @@
     "Phoenix": {
         "PIN": "2222",
         "Solde": 50
+    },
+    "Archer": {
+        "PIN": "2009",
+        "Solde": 15000
     }
 }
