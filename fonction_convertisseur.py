@@ -2,6 +2,7 @@ from math import floor
 from data import *
 from tools import *
 from menu import *
+from all_accounts import *
 
 def converter (account):
     nb50 = 0 # nombre de billets de 50 € qui se trouveront dans la conversion

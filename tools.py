@@ -52,7 +52,7 @@ def is_a_number (PIN):
         return False
     
 def validate_account (account):
-    if len(account) <=4:
+    if len(account) <4:
         print ("Name account must contain 4 characters minimum")
         return False
     else:
