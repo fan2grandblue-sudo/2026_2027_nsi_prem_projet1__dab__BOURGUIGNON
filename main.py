@@ -5,9 +5,9 @@ accounts = charger_accounts()
 global language
 choosing_lang = True
 while choosing_lang:
-    language = input("Select language : fr/en/jp/ar/fi/br/gz")
+    language = input("Select language : fr/en/jp/ar/fi/br/gz : ")
     if language not in translation.keys():
-        print_anim("Language invalid.")
+        print_anim("Language invalid.\n")
     else:
         choosing_lang = False
 load_bar(5, 100)
