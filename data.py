@@ -4,6 +4,15 @@ max_attempts = 3
 acceptable_entries = ["withdraw", "add"]
 numbers = ["0","1","2","3","4","5","6","7","8","9"]
 
+def pick_language():
+     choosing_lang = True
+     while choosing_lang:
+        language = input("Select language : fr/en/jp/ar/fi/br/gz")
+        if language not in translation.keys():
+             print_anim("Language invalid.")
+        else:
+             choosing_lang = False
+
 translation = {
     "fr" : ["BIENVENUE AU DAB",
             "Compte déjà existant ? :",
