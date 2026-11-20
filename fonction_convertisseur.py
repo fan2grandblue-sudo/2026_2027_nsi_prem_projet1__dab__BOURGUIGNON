@@ -4,11 +4,11 @@ from tools import *
 from menu import *
 from all_accounts import *
 
-def converter (account):
+def converter (account, language):
     nb50 = 0 # nombre de billets de 50 € qui se trouveront dans la conversion
     nb20 = 0
     nb10 = 0
-    amount = int(input("\n\nHow much do you want to withdraw (multiple of 10) ? ")) # demande au user de rentrer la somme d'argent qu'il veut convertir en billets et pièces
+    amount = int(input(translation[language][23])) # demande au user de rentrer la somme d'argent qu'il veut convertir en billets et pièces
 
     accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     

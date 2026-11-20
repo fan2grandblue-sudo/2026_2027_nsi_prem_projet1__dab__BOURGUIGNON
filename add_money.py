@@ -4,19 +4,19 @@ from tools import *
 from all_accounts import *
 
 
-def money_added_correct(money_added):
+def money_added_correct(money_added, language):
     for character in money_added:
         if character not in numbers : # vérifie si chaque caractère du montant est un entier naturel
             return False
     return True
 
 
-def add_money(account):
+def add_money(account, language):
     #money_added = str(input("\nHow much do you want to add to your account ?  "))  # servira à redemander une somme à ajouter tant que l'utilisateur n'aura pas rentré un nombre entier
     boolean = False
     while boolean == False : # exécute la fonction qui vérifie si l'entrée est bien un entier naturel
-        money_added = str(input("\nHow much do you want to add to your account ?  "))
-        boolean = money_added_correct (money_added)
+        money_added = str(input(translation[language][21]))
+        boolean = money_added_correct (money_added, language)
     
     accounts[account]["Solde"] = int(accounts[account]["Solde"]) + int(money_added)
     
