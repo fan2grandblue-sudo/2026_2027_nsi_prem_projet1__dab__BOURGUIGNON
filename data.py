@@ -1,5 +1,5 @@
-agree_words = ["はい", "hai", "ܐܝܢ", "kyllä", "joo", "yes", "of course", "for sure", "yep", "Y", "yurp", "yup", "yeah", "oui", "oe", "ouaip", "affirmatif", "ui", "ouais"]
-quit_words = ["quit", "いいえ", "iie", "ܠܐ", "ei", "nah", "stop", "terminate", "end", "exit", "fin", "terminer", "quitter"]
+agree_words = ["si", "ja", "是", "はい", "hai", "ܐܝܢ", "kyllä", "joo", "yes", "of course", "for sure", "yep", "Y", "yurp", "yup", "yeah", "oui", "oe", "ouaip", "affirmatif", "ui", "ouais"]
+quit_words = ["Seis", "停止", "Stopp", "Alto", "停止", "Կանգ առ", "quit", "stop", "terminate", "end", "exit", "fin", "terminer", "quitter"]
 max_attempts = 3
 acceptable_entries = ["withdraw", "add"]
 numbers = ["0","1","2","3","4","5","6","7","8","9"]
@@ -8,7 +8,7 @@ from tools import *
 def pick_language():
      choosing_lang = True
      while choosing_lang:
-        language = input("Select language : fr/en/jp/ar/fi/br/gz : ").lower()
+        language = input("Select language : fr/en/jp/ar/fi/es/de/ch/br/gz : ").lower()
         if language not in translation.keys():
              print_anim ("Language invalid.")
         else:
@@ -288,5 +288,124 @@ translation = {
         "Numbers only for your PIN, gang. ",
         "Your account name needs at least 4 characters, bro. ",
         " "
+    ],
+
+    "es": [
+        "BIENVENIDO AL CAJERO AUTOMÁTICO ",
+        "\n¿Ya tienes una cuenta? : ",
+        "Elige un nombre de usuario : ",
+        "Esta cuenta ya existe ",
+        "Elige un código PIN : ",
+        "\n¡Cuenta creada! ",
+        "Nombre de la cuenta : ",
+        "Código PIN : ",
+        "\n¡Inicio de sesión exitoso! ",
+        "Cuenta o código PIN incorrectos ",
+        "¿Prefieres crear una cuenta nueva? ",
+        "\nError n.º 1. Reinicia el programa. ",
+        "\n1 - Mostrar la cuenta bancaria ",
+        "\n2 - Añadir dinero ",
+        "\n3 - Retirar dinero ",
+        "\n4 - Configuración ",
+        "\n5 - Cerrar sesión ",
+        "\nElige una operación ",
+        "\n¡Gracias por utilizar nuestro cajero automático! ",
+        "\n¡Hasta pronto! ",
+        "\nPor favor, elige una de las operaciones anteriores ",
+        "\n¿Cuánto dinero quieres añadir a tu cuenta bancaria? ",
+        "¡Ahora tienes {solde} € en tu cuenta! ",
+        "\n¿Cuánto dinero quieres retirar (múltiplo de 10)? ",
+        "\nLa cantidad debe estar comprendida entre 1 y 300. ",
+        "\n¿Cuánto dinero quieres retirar? ",
+        "\nLa cantidad debe ser un número entero. ",
+        "\nLa cantidad debe ser múltiplo de 10. ",
+        "\nAquí tienes tu cambio :\n",
+        "1 billete de 50 €\n",
+        "1 billete de 20 €\n",
+        "1 billete de 10 €\n",
+        "El código PIN debe tener 4 caracteres. ",
+        "El código PIN solo debe contener números. ",
+        "El nombre de la cuenta debe tener al menos 4 caracteres. ",
+        " "
+    ],
+
+    "de": [
+        "WILLKOMMEN AM GELDAUTOMATEN ",
+        "\nHaben Sie bereits ein Konto? : ",
+        "Wählen Sie einen Benutzernamen : ",
+        "Dieses Konto existiert bereits ",
+        "Wählen Sie eine PIN : ",
+        "\nKonto erstellt! ",
+        "Kontoname : ",
+        "PIN : ",
+        "\nAnmeldung erfolgreich! ",
+        "Falsches Konto oder falsche PIN ",
+        "Möchten Sie stattdessen ein neues Konto erstellen? ",
+        "\nFehler Nr. 1. Bitte starten Sie das Programm neu. ",
+        "\n1 - Bankkonto anzeigen ",
+        "\n2 - Geld einzahlen ",
+        "\n3 - Geld abheben ",
+        "\n4 - Einstellungen ",
+        "\n5 - Abmelden ",
+        "\nWählen Sie eine Aktion ",
+        "\nVielen Dank, dass Sie unseren Geldautomaten benutzt haben! ",
+        "\nBis bald! ",
+        "\nBitte wählen Sie eine der oben genannten Aktionen ",
+        "\nWie viel Geld möchten Sie auf Ihr Bankkonto einzahlen? ",
+        "Sie haben jetzt {solde} € auf Ihrem Konto! ",
+        "\nWie viel Geld möchten Sie abheben (Vielfaches von 10)? ",
+        "\nDer Betrag muss zwischen 1 und 300 liegen. ",
+        "\nWie viel Geld möchten Sie abheben? ",
+        "\nDer Betrag muss eine ganze Zahl sein. ",
+        "\nDer Betrag muss ein Vielfaches von 10 sein. ",
+        "\nHier ist Ihr Wechselgeld :\n",
+        "1 Geldschein zu 50 €\n",
+        "1 Geldschein zu 20 €\n",
+        "1 Geldschein zu 10 €\n",
+        "Die PIN muss aus 4 Zeichen bestehen. ",
+        "Die PIN darf nur Zahlen enthalten. ",
+        "Der Kontoname muss mindestens 4 Zeichen lang sein. ",
+        " "
+    ],
+
+    "ch": [
+        "欢迎使用自动取款机 ",
+        "\n您已经有账户了吗？：",
+        "请选择用户名：",
+        "该账户已经存在 ",
+        "请设置 PIN 码：",
+        "\n账户创建成功！",
+        "账户名称：",
+        "PIN 码：",
+        "\n登录成功！",
+        "账户或 PIN 码错误 ",
+        "您想改为创建一个新账户吗？",
+        "\n错误编号 1。请重新启动程序。",
+        "\n1 - 查看银行账户",
+        "\n2 - 存入现金",
+        "\n3 - 提取现金",
+        "\n4 - 设置",
+        "\n5 - 退出登录",
+        "\n请选择一项操作",
+        "\n感谢您使用我们的自动取款机！",
+        "\n再见！",
+        "\n请选择上述操作之一",
+        "\n您想向银行账户存入多少钱？",
+        "您现在的账户余额为 {solde} €！",
+        "\n您想提取多少钱（必须是 10 的倍数）？",
+        "\n金额必须在 1 到 300 之间。",
+        "\n您想提取多少钱？",
+        "\n金额必须是整数。",
+        "\n金额必须是 10 的倍数。",
+        "\n这是您的找零：\n",
+        "1 张 50 欧元纸币\n",
+        "1 张 20 欧元纸币\n",
+        "1 张 10 欧元纸币\n",
+        "PIN 码必须为 4 个字符。",
+        "PIN 码只能包含数字。",
+        "账户名称至少需要 4 个字符。",
+        " "
     ]
+
+
 }
