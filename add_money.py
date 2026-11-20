@@ -4,7 +4,7 @@ from tools import *
 from all_accounts import *
 
 
-def money_added_correct(money_added, language):
+def money_added_correct(money_added):
     for character in money_added:
         if character not in numbers : # vérifie si chaque caractère du montant est un entier naturel
             return False
@@ -16,11 +16,11 @@ def add_money(account, language):
     boolean = False
     while boolean == False : # exécute la fonction qui vérifie si l'entrée est bien un entier naturel
         money_added = str(input(translation[language][21]))
-        boolean = money_added_correct (money_added, language)
+        boolean = money_added_correct (money_added)
     
     accounts[account]["Solde"] = int(accounts[account]["Solde"]) + int(money_added)
     
 
     
     
-    print_anim (f"\nYou now have {accounts[account]['Solde']} on your account ! ")
+    print_anim (f"\n{translation[language][38]} {accounts[account]['Solde']} {translation[language][39]}")

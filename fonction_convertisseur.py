@@ -13,17 +13,17 @@ def converter (account, language):
     accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     
     while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
-        print_anim ("\n\nThe amount must be between 1 and 300.")
-        amount = int(input("How much do you want to withdraw ?"))
+        print_anim (translation[language][24])
+        amount = int(input(translation[language][25]))
     while amount > 300 :
-        print_anim ("\n\nThe amount must be between 1 and 300.")
-        amount = int(input("How much do you want to withdraw ?"))
+        print_anim (translation[language][24])
+        amount = int(input(translation[language][25]))
     while type(amount) is float : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un entier
-        print_anim ("\n\nThe amount must be an integer.")
-        amount = int(input("How much do you want to withdraw ?"))
+        print_anim (translation[language][27])
+        amount = int(input(translation[language][28]))
     while amount % 10 != 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un multiple de 10
-        print_anim ("\n\nThe amount must be a multiple of 10.")
-        amount = int(input("How much do you want to withdraw (multiple of 10) ? "))
+        print_anim (translation[language][29])
+        amount = int(input(translation[language][30]))
         
     
     for i in range (floor(amount / 50 )) : # permet de soustraire un nombre de billets de 50 € dépendant du montant
@@ -38,22 +38,22 @@ def converter (account, language):
 
 
 
-    print_anim ("\nHere is your change :\n")
+    print_anim (translation[language][28])
 
     if nb50 == 1 :
-        print_anim ("1 bill of 50 €\n") # pour faire en sorte que ça affiche "billet" sans "s" puisque qu'il n'y en a qu'un seul
+        print_anim (translation[language][29]) # pour faire en sorte que ça affiche "billet" sans "s" puisque qu'il n'y en a qu'un seul
     elif nb50 > 1 :
-        print_anim (f"{nb50} bills of 50 €\n") # pour faire en sorte de ne pas afficher de billets rendus s'il n'y en a pas
+        print_anim (f"{nb50}{translation[language][35]} ") # pour faire en sorte de ne pas afficher de billets rendus s'il n'y en a pas
     if nb20 == 1 :
-        print_anim ("1 bill of 20 €\n")
+        print_anim (translation[language][30])
     elif nb20 > 1 :
-        print_anim (f"{nb20} bills of 20 €\n")
+        print_anim (f"{nb20}{translation[language][36]}")
     if nb10 == 1 :
-        print_anim ("1 bill of 10 €\n")
+        print_anim (translation[language][31])
     elif nb10 > 1 :
-        print_anim (f"{nb10} bills of 10 €\n")
+        print_anim (f"{nb10} {translation[language][37]}")
 
-    print_anim (f"You now have {accounts[account]['Solde']} on your account.\n")
+    print_anim (f"{translation[language][38]} {accounts[account]['Solde']} {translation[language][39]}")
 
     print ("")
 

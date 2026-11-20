@@ -3,14 +3,14 @@ quit_words = ["Seis", "停止", "Stopp", "Alto", "停止", "Կանգ առ", "qui
 max_attempts = 3
 acceptable_entries = ["withdraw", "add"]
 numbers = ["0","1","2","3","4","5","6","7","8","9"]
-from tools import *
+from tools import * 
 
 def pick_language():
      choosing_lang = True
      while choosing_lang:
-        language = input("Select language : fr/en/jp/ar/fi/es/de/ch/br/gz : ").lower()
+        language = input("\nSelect language : fr/en/jp/ar/fi/es/de/ch/br/gz : ").lower()
         if language not in translation.keys():
-             print_anim ("Language invalid.")
+             print ("Language invalid.\n")
         else:
              choosing_lang = False
      return language
@@ -29,7 +29,7 @@ translation = {
         "\nConnexion réussie ! ",
         "Compte ou code PIN incorrect ",
         "Voulez-vous plutôt créer un nouveau compte ? ",
-        "\nErreur n°1. Veuillez redémarrer. ",
+        "\nErreur n°1. Veuillez redémarrer. \n",
         "\n1 - Afficher le compte bancaire ",
         "\n2 - Ajouter de l'argent ",
         "\n3 - Retirer de l'argent ",
@@ -40,7 +40,7 @@ translation = {
         "\nÀ bientôt ! ",
         "\nVeuillez choisir l'une des opérations ci-dessus ",
         "\nCombien voulez-vous ajouter à votre compte bancaire ? ",
-        "Vous avez maintenant {solde} € sur votre compte ! ",
+        "\nSolde bancaire insuffisant. ",
         "\nCombien voulez-vous retirer (multiple de 10) ? ",
         "\nLe montant doit être compris entre 1 et 300. ",
         "\nCombien voulez-vous retirer ? ",
@@ -53,7 +53,14 @@ translation = {
         "Le code PIN doit contenir 4 caractères. ",
         "Le code PIN doit contenir uniquement des chiffres. ",
         "Le nom du compte doit contenir au moins 4 caractères. ",
-        " "
+        " billets de 50 €\n",
+        " billets de 20 €\n",
+        " billets de 10 €\n",
+        "Vous avez maintenant ",
+        "€ sur votre compte.\n",
+        "Vous avez ",
+        "€ sur votre compte.\n"
+        
     ],
 
     "en": [
@@ -68,7 +75,7 @@ translation = {
         "\nLogin successful ! ",
         "Wrong account or PIN ",
         "Do you want to create a new account instead ? ",
-        "\nError n1. Please restart. ",
+        "\nError n1. Please restart. \n",
         "\n1 - Show bank account ",
         "\n2 - Add money ",
         "\n3 - Withdraw money ",
@@ -79,7 +86,7 @@ translation = {
         "\nSee you soon ! ",
         "\nPlease choose one of the operations above ",
         "\nHow much do you want to add to your bank account ? ",
-        "You now have {solde} € on your account ! ",
+        "\nInsufficient bank balance. ",
         "\nHow much do you want to withdraw (multiple of 10) ? ",
         "\n\nThe amount must be between 1 and 300. ",
         "\nHow much do you want to withdraw ? ",
@@ -92,7 +99,13 @@ translation = {
         "PIN must be 4 characters long. ",
         "PIN must contain numbers only. ",
         "Account name must contain at least 4 characters. ",
-        " "
+        " bills of 50 €\n",
+        " bills of 20 €\n",
+        " bills of 10 €\n",
+        "You now have ",
+        "€ on your account.\n",
+        "You have ",
+        "€ on your account.\n"
     ],
 
     "ar": [
@@ -107,7 +120,7 @@ translation = {
         "\nܥܠܠܬ ܒܢܓܠܚܐ ! ",
         "ܚܘܫܒܢܐ ܝܢ ܪܡܙܐ ܠܐ ܬܪܝܨܐ ",
         "ܒܥܝܬ ܠܡܒܪܝܐ ܚܘܫܒܢܐ ܚܕܬܐ ؟ ",
-        "\nܦܘܕܐ ܢܘܡܪܐ 1. ܚܕܬ ܠܡܦܬܚ. ",
+        "\nܦܘܕܐ ܢܘܡܪܐ 1. ܚܕܬ ܠܡܦܬܚ. \n",
         "\n1 - ܚܙܝ ܚܘܫܒܢܐ ",
         "\n2 - ܐܘܣܦ ܟܣܦܐ ",
         "\n3 - ܫܩܘܠ ܟܣܦܐ ",
@@ -118,7 +131,7 @@ translation = {
         "\nܠܦܘܫ ܚܙܝܬܐ ! ",
         "\nܒܥܝ ܓܒܝ ܚܕ ܡܢ ܦܘܠܚܢ̈ܐ ܕܠܥܠ ",
         "\nܟܡܐ ܟܣܦܐ ܒܥܝܬ ܠܡܘܣܦ ܠܚܘܫܒܢܟ ؟ ",
-        "ܐܝܬ ܠܟ ܗܫܐ {solde} € ܒܚܘܫܒܢܟ ! ",
+        "\nܟܣܦܐ ܠܐ ܡܣܦܩܐ ܒܚܘܫܒܢܟ. ",
         "\nܟܡܐ ܟܣܦܐ ܒܥܝܬ ܠܡܫܩܠ (ܡܦܠܓܐ ܕ 10) ؟ ",
         "\n""ܟܡܘܬܐ ܚܝܒܐ ܗܘܝܐ ܒܝܢ 1 ܘ 300. ",
         "\nܟܡܐ ܟܣܦܐ ܒܥܝܬ ܠܡܫܩܠ ؟ ",
@@ -131,7 +144,13 @@ translation = {
         "ܪܡܙܐ ܚܝܒܐ 4 ܐܬܘܬ̈ܐ ",
         "ܪܡܙܐ ܚܝܒܐ ܡܢܝܢ̈ܐ ܒܠܚܘܕ ",
         "ܫܡܐ ܕܚܘܫܒܢܐ ܚܝܒܐ ܠܐ ܦܚܘܬ 4 ܐܬܘܬ̈ܐ ",
-        " "
+        " ܫܛܪ̈ܐ ܕ 50 €\n",
+        " ܫܛܪ̈ܐ ܕ 20 €\n",
+        " ܫܛܪ̈ܐ ܕ 10 €\n",
+        "ܐܝܬ ܠܟ ܗܫܐ ",
+        "€ ܒܚܘܫܒܢܟ.\n",
+        "ܐܝܬ ܠܟ ",
+        "€ ܒܚܘܫܒܢܟ.\n"
     ],
 
     "jp": [
@@ -146,7 +165,7 @@ translation = {
         "\nログインに成功しました！ ",
         "アカウント名または暗証番号が間違っています ",
         "代わりに新しいアカウントを作成しますか？ ",
-        "\nエラー番号1。再起動してください。 ",
+        "\nエラー番号1。再起動してください。 \n",
         "\n1 - 銀行口座を表示 ",
         "\n2 - 入金 ",
         "\n3 - 出金 ",
@@ -157,7 +176,7 @@ translation = {
         "\nまたお越しください！ ",
         "\n上記の操作から選択してください ",
         "\n口座にいくら入金しますか？ ",
-        "現在の口座残高は {solde} € です！ ",
+        "\n銀行口座の残高が不足しています。 ",
         "\nいくら出金しますか？（10の倍数） ",
         "金額は1から300まででなければなりません。 ",
         "\nいくら出金しますか？ ",
@@ -170,7 +189,13 @@ translation = {
         "暗証番号は4文字でなければなりません。 ",
         "暗証番号には数字のみ使用できます。 ",
         "アカウント名は最低4文字必要です。 ",
-        " "
+        " 50ユーロ札\n",
+        " 20ユーロ札\n",
+        " 10ユーロ札\n",
+        "現在の残高：",
+        "€ 口座にあります。\n",
+        "あなたの残高は ",
+        "€ です。\n"
     ],
 
     "fi": [
@@ -185,7 +210,7 @@ translation = {
         "\nKirjautuminen onnistui ! ",
         "Väärä tili tai PIN-koodi ",
         "Haluatko luoda uuden tilin sen sijaan ? ",
-        "\nVirhe nro 1. Käynnistä uudelleen. ",
+        "\nVirhe nro 1. Käynnistä uudelleen. \n",
         "\n1 - Näytä pankkitili ",
         "\n2 - Lisää rahaa ",
         "\n3 - Nosta rahaa ",
@@ -196,7 +221,7 @@ translation = {
         "\nNähdään pian ! ",
         "\nValitse jokin yllä olevista toiminnoista ",
         "\nKuinka paljon haluat lisätä pankkitilillesi ? ",
-        "Tililläsi on nyt {solde} € ! ",
+        "\nTilillä ei ole riittävästi rahaa. ",
         "\nKuinka paljon haluat nostaa (10:n monikerta) ? ",
         "\nSumman on oltava 1–300. ",
         "\nKuinka paljon haluat nostaa ? ",
@@ -209,7 +234,13 @@ translation = {
         "PIN-koodin on oltava 4 merkkiä pitkä. ",
         "PIN-koodissa saa olla vain numeroita. ",
         "Tilin nimessä on oltava vähintään 4 merkkiä. ",
-        " "
+        " 50 € setelit\n",
+        " 20 € setelit\n",
+        " 10 € setelit\n",
+        "Sinulla on nyt ",
+        "€ tililläsi.\n",
+        "Sinulla on ",
+        "€ tililläsi.\n"
     ],
 
     "br": [
@@ -224,7 +255,7 @@ translation = {
         "\n⠠⠇⠕⠛⠊⠝ ⠎⠥⠉⠉⠑⠎⠎⠋⠥⠇ ⠖ ",
         "⠠⠺⠗⠕⠝⠛ ⠁⠉⠉⠕⠥⠝⠞ ⠕⠗ ⠠⠏⠠⠊⠠⠝ ",
         "⠠⠙⠕ ⠽⠕⠥ ⠺⠁⠝⠞ ⠞⠕ ⠉⠗⠑⠁⠞⠑ ⠁ ⠝⠑⠺ ⠁⠉⠉⠕⠥⠝⠞ ⠊⠝⠎⠞⠑⠁⠙ ⠦ ",
-        "\n⠠⠑⠗⠗⠕⠗ ⠝⠼⠁⠲ ⠠⠏⠇⠑⠁⠎⠑ ⠗⠑⠎⠞⠁⠗⠞⠲ ",
+        "\n⠠⠑⠗⠗⠕⠗ ⠝⠼⠁⠲ ⠠⠏⠇⠑⠁⠎⠑ ⠗⠑⠎⠞⠁⠗⠞⠲ \n",
         "\n⠼⠁ ⠤ ⠠⠎⠓⠕⠺ ⠃⠁⠝⠅ ⠁⠉⠉⠕⠥⠝⠞ ",
         "\n⠼⠃ ⠤ ⠠⠁⠙⠙ ⠍⠕⠝⠑⠽ ",
         "\n⠼⠉ ⠤ ⠠⠺⠊⠞⠓⠙⠗⠁⠺ ⠍⠕⠝⠑⠽ ",
@@ -235,7 +266,7 @@ translation = {
         "\n⠠⠎⠑⠑ ⠽⠕⠥ ⠎⠕⠕⠝ ⠖ ",
         "\n⠠⠏⠇⠑⠁⠎⠑ ⠉⠓⠕⠕⠎⠑ ⠕⠝⠑ ⠕⠋ ⠞⠓⠑ ⠕⠏⠑⠗⠁⠞⠊⠕⠝⠎ ⠁⠃⠕⠧⠑ ",
         "\n⠠⠓⠕⠺ ⠍⠥⠉⠓ ⠙⠕ ⠽⠕⠥ ⠺⠁⠝⠞ ⠞⠕ ⠁⠙⠙ ⠞⠕ ⠽⠕⠥⠗ ⠃⠁⠝⠅ ⠁⠉⠉⠕⠥⠝⠞ ⠦ ",
-        "⠠⠽⠕⠥ ⠝⠕⠺ ⠓⠁⠧⠑ {solde} € ⠕⠝ ⠽⠕⠥⠗ ⠁⠉⠉⠕⠥⠝⠞ ⠖ ",
+        "\n⠊⠝⠎⠥⠋⠋⠊⠉⠊⠑⠝⠞ ⠃⠁⠝⠅ ⠃⠁⠇⠁⠝⠉⠑⠲ ",
         "\n⠠⠓⠕⠺ ⠍⠥⠉⠓ ⠙⠕ ⠽⠕⠥ ⠺⠁⠝⠞ ⠞⠕ ⠺⠊⠞⠓⠙⠗⠁⠺ ⠦ ",
         "\n⠠⠞⠓⠑ ⠁⠍⠕⠥⠝⠞ ⠍⠥⠎⠞ ⠃⠑ ⠃⠑⠞⠺⠑⠑⠝ ⠼⠁ ⠁⠝⠙ ⠼⠉⠚⠚⠲ ",
         "\n⠠⠓⠕⠺ ⠍⠥⠉⠓ ⠙⠕ ⠽⠕⠥ ⠺⠁⠝⠞ ⠞⠕ ⠺⠊⠞⠓⠙⠗⠁⠺ ⠦ ",
@@ -248,7 +279,13 @@ translation = {
         "⠠⠏⠠⠊⠠⠝ ⠍⠥⠎⠞ ⠃⠑ ⠼⠙ ⠉⠓⠁⠗⠁⠉⠞⠑⠗⠎ ⠇⠕⠝⠛ ",
         "⠠⠏⠠⠊⠠⠝ ⠍⠥⠎⠞ ⠉⠕⠝⠞⠁⠊⠝ ⠝⠥⠍⠃⠑⠗⠎ ⠕⠝⠇⠽ ",
         "⠠⠁⠉⠉⠕⠥⠝⠞ ⠝⠁⠍⠑ ⠍⠥⠎⠞ ⠃⠑ ⠁⠞ ⠇⠑⠁⠎⠞ ⠼⠙ ⠉⠓⠁⠗⠁⠉⠞⠑⠗⠎ ",
-        " "
+        " ⠃⠊⠇⠇⠎ ⠕⠋ ⠼⠑⠚ €\n",
+        " ⠃⠊⠇⠇⠎ ⠕⠋ ⠼⠃⠚ €\n",
+        " ⠃⠊⠇⠇⠎ ⠕⠋ ⠼⠁⠚ €\n",
+        "⠠⠽⠕⠥ ⠝⠕⠺ ⠓⠁⠧⠑ ",
+        "€ ⠕⠝ ⠽⠕⠥⠗ ⠁⠉⠉⠕⠥⠝⠞⠲\n",
+        "⠠⠽⠕⠥ ⠓⠁⠧⠑ ",
+        "€ ⠕⠝ ⠽⠕⠥⠗ ⠁⠉⠉⠕⠥⠝⠞⠲\n"
     ],
 
     "gz": [
@@ -263,7 +300,7 @@ translation = {
         "\nYou're in, no cap! ",
         "Wrong account or PIN, bro. Try again. ",
         "Wanna create a fresh account instead, gang? ",
-        "\nError n1. Restart the whole thing, bro. ",
+        "\nError n1. Restart the whole thing, bro. \n",
         "\n1 - Check your bank balance ",
         "\n2 - Add some cash ",
         "\n3 - Take some cash out ",
@@ -274,7 +311,7 @@ translation = {
         "\nAight, see you soon! ",
         "\nPick one of the options above, bro. ",
         "\nHow much cash you tryna add to your account? ",
-        "You got {solde} € in your account now, gang! ",
+        "\nBro, you're too broke to add that much, gang. ",
         "\nHow much you tryna withdraw (multiples of 10)? ",
         "\nThe amount gotta be between 1 and 300, bro. ",
         "\nHow much cash you tryna withdraw? ",
@@ -287,7 +324,13 @@ translation = {
         "Your PIN gotta be exactly 4 characters, bro. ",
         "Numbers only for your PIN, gang. ",
         "Your account name needs at least 4 characters, bro. ",
-        " "
+        " fifty-euro bills\n",
+        " twenty-euro bills\n",
+        " ten-euro bills\n",
+        "You got ",
+        "€ in your account, gang!\n",
+        "You got ",
+        "€ in your account, bro!\n"
     ],
 
     "es": [
@@ -302,7 +345,7 @@ translation = {
         "\n¡Inicio de sesión exitoso! ",
         "Cuenta o código PIN incorrectos ",
         "¿Prefieres crear una cuenta nueva? ",
-        "\nError n.º 1. Reinicia el programa. ",
+        "\nError n.º 1. Reinicia el programa. \n",
         "\n1 - Mostrar la cuenta bancaria ",
         "\n2 - Añadir dinero ",
         "\n3 - Retirar dinero ",
@@ -313,7 +356,7 @@ translation = {
         "\n¡Hasta pronto! ",
         "\nPor favor, elige una de las operaciones anteriores ",
         "\n¿Cuánto dinero quieres añadir a tu cuenta bancaria? ",
-        "¡Ahora tienes {solde} € en tu cuenta! ",
+        "\nSaldo bancario insuficiente. ",
         "\n¿Cuánto dinero quieres retirar (múltiplo de 10)? ",
         "\nLa cantidad debe estar comprendida entre 1 y 300. ",
         "\n¿Cuánto dinero quieres retirar? ",
@@ -326,7 +369,13 @@ translation = {
         "El código PIN debe tener 4 caracteres. ",
         "El código PIN solo debe contener números. ",
         "El nombre de la cuenta debe tener al menos 4 caracteres. ",
-        " "
+        " billetes de 50 €\n",
+        " billetes de 20 €\n",
+        " billetes de 10 €\n",
+        "Ahora tienes ",
+        "€ en tu cuenta.\n",
+        "Tienes ",
+        "€ en tu cuenta.\n"
     ],
 
     "de": [
@@ -341,7 +390,7 @@ translation = {
         "\nAnmeldung erfolgreich! ",
         "Falsches Konto oder falsche PIN ",
         "Möchten Sie stattdessen ein neues Konto erstellen? ",
-        "\nFehler Nr. 1. Bitte starten Sie das Programm neu. ",
+        "\nFehler Nr. 1. Bitte starten Sie das Programm neu. \n",
         "\n1 - Bankkonto anzeigen ",
         "\n2 - Geld einzahlen ",
         "\n3 - Geld abheben ",
@@ -352,7 +401,7 @@ translation = {
         "\nBis bald! ",
         "\nBitte wählen Sie eine der oben genannten Aktionen ",
         "\nWie viel Geld möchten Sie auf Ihr Bankkonto einzahlen? ",
-        "Sie haben jetzt {solde} € auf Ihrem Konto! ",
+        "\nUnzureichendes Bankguthaben. ",
         "\nWie viel Geld möchten Sie abheben (Vielfaches von 10)? ",
         "\nDer Betrag muss zwischen 1 und 300 liegen. ",
         "\nWie viel Geld möchten Sie abheben? ",
@@ -365,7 +414,13 @@ translation = {
         "Die PIN muss aus 4 Zeichen bestehen. ",
         "Die PIN darf nur Zahlen enthalten. ",
         "Der Kontoname muss mindestens 4 Zeichen lang sein. ",
-        " "
+        " 50-€-Geldscheine\n",
+        " 20-€-Geldscheine\n",
+        " 10-€-Geldscheine\n",
+        "Sie haben jetzt ",
+        "€ auf Ihrem Konto.\n",
+        "Sie haben ",
+        "€ auf Ihrem Konto.\n"
     ],
 
     "ch": [
@@ -380,7 +435,7 @@ translation = {
         "\n登录成功！",
         "账户或 PIN 码错误 ",
         "您想改为创建一个新账户吗？",
-        "\n错误编号 1。请重新启动程序。",
+        "\n错误编号 1。请重新启动程序。\n",
         "\n1 - 查看银行账户",
         "\n2 - 存入现金",
         "\n3 - 提取现金",
@@ -391,7 +446,7 @@ translation = {
         "\n再见！",
         "\n请选择上述操作之一",
         "\n您想向银行账户存入多少钱？",
-        "您现在的账户余额为 {solde} €！",
+        "\n银行账户余额不足。 ",
         "\n您想提取多少钱（必须是 10 的倍数）？",
         "\n金额必须在 1 到 300 之间。",
         "\n您想提取多少钱？",
@@ -404,7 +459,13 @@ translation = {
         "PIN 码必须为 4 个字符。",
         "PIN 码只能包含数字。",
         "账户名称至少需要 4 个字符。",
-        " "
+        "张 50 欧元纸币\n",
+        "张 20 欧元纸币\n",
+        "张 10 欧元纸币\n",
+        "您现在有 ",
+        "€ 在您的账户中。\n",
+        "您有 ",
+        "€ 在您的账户中。\n"
     ]
 
 

@@ -2,7 +2,7 @@ from tools import *
 from data import *
 from menu import *
 from all_accounts import *
-
+ 
 
 def register_or_login (language):
     print("\n")
@@ -19,18 +19,19 @@ def register_or_login (language):
 def register(account, language):
 
     if account in accounts: # vérifie si le nom de compte choisi par l'utilisateur existe déjà dans le dictionnaire accounts
-        print(translation[language][3])
+        print_anim (translation[language][3])
         register_or_login (language)
     elif account in quit_words:
         exit()
-    elif validate_account (account) == True:
+    elif validate_account (account, language) == True:
         PIN = input(translation[language][4])
-        if validate_code (PIN) == True and is_a_number (PIN) == True:
+        if validate_code (PIN, language) == True and is_a_number (PIN, language) == True:
             accounts[account] = {"PIN": PIN, "Solde": 0} # ajoute le nouveau compte à la liste des comptes avec un solde de 0
             print_anim(translation[language][5])
             register_or_login (language)
         else:
-            register (account, language)
+            print_anim(translation[language][11])
+            register_or_login (language)
     else:
         register_or_login (language)
         return
