@@ -10,7 +10,6 @@ def converter (account, language):
     nb10 = 0
     amount = int(input(translation[language][23])) # demande au user de rentrer la somme d'argent qu'il veut convertir en billets et pièces
 
-    accounts[account]["Solde"] = accounts[account]["Solde"] - amount
     
     while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
         print_anim (translation[language][24])
@@ -24,6 +23,8 @@ def converter (account, language):
     while amount % 10 != 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas un multiple de 10
         print_anim (translation[language][29])
         amount = int(input(translation[language][30]))
+
+    accounts[account]["Solde"] = accounts[account]["Solde"] - amount # soustrait le montant converti du solde du compte du user
         
     
     for i in range (floor(amount / 50 )) : # permet de soustraire un nombre de billets de 50 € dépendant du montant
