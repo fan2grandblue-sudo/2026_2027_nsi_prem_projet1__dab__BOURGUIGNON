@@ -42,7 +42,7 @@ translation = {
         "\nCombien voulez-vous ajouter à votre compte bancaire ? ",
         "\nSolde bancaire insuffisant. ",
         "\nCombien voulez-vous retirer (multiple de 10) ? ",
-        "\nLe montant doit être compris entre 1 et 300. ",
+        "\nLe montant doit être compris entre 1, 300 et doit également être inférieur ou égal au solde de votre compte. ",
         "\nCombien voulez-vous retirer ? ",
         "\nLe montant doit être un nombre entier. ",
         "\nLe montant doit être un multiple de 10. ",

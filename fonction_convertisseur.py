@@ -11,7 +11,7 @@ def converter (account, language):
     amount = int(input(translation[language][23])) # demande au user de rentrer la somme d'argent qu'il veut convertir en billets et pièces
 
     
-    while amount <= 0 : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
+    while amount <= 0 and amount <= accounts[account]["Solde"] : # le programme redemande de rentrer un montant tant que celui-ci n'est pas compris entre 1 et 1000
         print_anim (translation[language][24])
         amount = int(input(translation[language][25]))
     while amount > 300 :
