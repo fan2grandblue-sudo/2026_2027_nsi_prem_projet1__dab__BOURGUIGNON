@@ -34,3 +34,5 @@ Pin_code :
 - fonction_convertisseur : on a fait en sorte que le programme affiche le montant prélever correct (par exemple, il ne doit pas afficher le premier montant prélever si celui-ci est trop grand alors que le user a finalement prélever un montant réglementaire, et donc bien moindre)
 - add_money : on a réussi a faire en sorte que si le user ne met pas un montant qui est un nombre, le programme redemande correctement et prend la nouvelle valeur que le user a entré
 - début de la création dans data du dictionnaire contenant tous les textes de l'ATM dans différentes langues.
+
+Lien canva : https://canva.link/fz57j3g27sw517e
